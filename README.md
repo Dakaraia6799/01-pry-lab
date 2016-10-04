@@ -20,13 +20,11 @@ Pry is far more flexible than IRB. Once you install the Pry library (via the Pry
 
 That line will get interpreted at runtime (as your program is executed). When the interpreter hits that line, your program will actually *freeze* and your terminal will turn into a REPL that exists right in the middle of your program, wherever you added the `binding.pry` line. 
 
-Let's take a look. In this repository, you'll see a file called `pry_is_awesome.rb`. 
-
 ## Instructions Part I
 
 1. Fork and clone this repository. 
 
-2. Install Pry on your computer by navigating to your home directory (`cd ~` in your terminal) and execute `gem install pry`. 
+2. Install Pry by navigating to your home directory (`cd ~/workspace` in your terminal) and execute `gem install pry`. 
 
 3. Head back to the lab and look at the code in `lib/pry_is_awesome.rb`
 
@@ -73,11 +71,11 @@ Now, in the terminal, type `exit`, and you'll leave your pry console and the pro
 
 ## Instructions Part II: Using Pry to Debug
 
-You can imagine how helpful it will by to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned down onto your computer, you'll see a `spec` folder containing a file `pry_debugging_spec.rb`. This is a test for the file `lib/pry_debugging.rb`. 
+You can imagine how helpful it will by to use Pry to freeze programs and to "pry" methods open in order to solve tests and debug your code. Let's walk through an example together. In this repository that you've forked and cloned, you should also see the file `lib/pry_debugging.rb`. 
 
-In that file, we have a broken method. Run `rspec` or `learn` to see the failing test. 
+In that file, we have a broken method. Run `rspec` to see the failing test. 
 
-Oh no! A broken program! Luckily, we have Pry required at the top of our `spec/pry_debugging_spec.rb` file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
+Oh no! A broken program! Luckily, we already have Pry required at the top of our `spec/pry_debugging_spec.rb` test file, and we know how to use it. Let's place a `binding.pry` right before the `end` keyword like this. 
 
 ```ruby
 def plus_two(num)
@@ -113,12 +111,10 @@ By checking the value of the variable on the last line of our method inside our 
 
 How can we fix this method so that is behaves in the expected way? This method is called `plus_two` and the test is expecting a return value of `5`, given a `num` of `3`. Looks like our method should return the *sum* of the original number, plus 2, but our method, as it currently stands, is returning the original number. Play around with it inside your Pry console and get the test to pass. Remember to type `exit` in your terminal and then remove your `binding.pry` when you think your test will pass. 
 
-Once you have your test passing, make sure the `binding.pry` line has been removed and add, commit and push your changes. Then open a pull request. 
+Once you have your test passing, make sure you remove the `binding.pry` line. 
 
 ## Resources
 
-* Watch [this video on pry](http://vimeo.com/26391171). Only watch the first three sections (install, features, as a debugger), we'll cover using Pry in Rails later when it will make more sense.
-
-<iframe src="https://player.vimeo.com/video/26391171?title=0&byline=0&portrait=0" width="100%" height="750" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+* [A video on pry](http://vimeo.com/26391171). Only watch the first three sections (install, features, as a debugger).
 
 * [Pry documentation](http://pryrepl.org/)
