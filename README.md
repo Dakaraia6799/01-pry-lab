@@ -88,7 +88,7 @@ end
 Now, run the test suite again and drop into your Pry console. Your terminal should look like this: 
 
 ```ruby
-From: /Users/sophiedebenedetto/Desktop/Dev/Ruby-Methods_and_Variables/pry-readme/lib/pry_debugging.rb @ line 4 Object#plus_two:
+From: /home/ubuntu/workspace/01-variables-methods/01-pry-lab/lib/pry_debugging.rb @ line 4 Object#plus_two:
 
     1: def plus_two(num)
     2:  num + 2
